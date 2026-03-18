@@ -1,0 +1,14 @@
+# Algoritmos e Programação: Orientação a Objetos (C++) 💻
+
+[cite_start]Repositório destinado aos materiais, exercícios e trabalhos da atividade acadêmica de **Algoritmos e Programação: Orientação a Objetos** na **UNISINOS**[cite: 1, 5].
+
+---
+
+## 📚 O que iremos aprender:
+[cite_start]O curso inicia com uma revisão de lógica em C e avança para os conceitos fundamentais de POO e Estruturas de Dados[cite: 11, 12].
+
+### Principais Tópicos:
+* [cite_start]**Revisão C:** Funções, Vetores, Strings, Ponteiros e Alocação Dinâmica[cite: 11].
+* [cite_start]**Fundamentos de POO:** Classes, Objetos, Atributos, Métodos e Construtores[cite: 11, 12].
+* [cite_start]**Aprofundamento POO:** Herança, Polimorfismo, Sobrecarga/Sobrescrita e Tratamento de Exceções[cite: 12].
+* [cite_start]**Estruturas de Dados:** Pilhas, Filas e Listas Encadeadas[cite: 12].
