@@ -19,7 +19,5 @@ class Motorista {
         void set_veiculo(string veiculo);
 };
 
-
-
 #endif
     
