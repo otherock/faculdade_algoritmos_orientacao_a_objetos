@@ -1,50 +1,56 @@
-#include <iostream>
 #include "veiculo.h"
+#include <iostream>
 
-Veiculo::Veiculo (string placa, string modelo){
-    this-> placa = placa;
-    this-> modelo = modelo;
-    this-> combustivel = 0;
+using namespace std;
+
+Veiculo::Veiculo(const string placa, const string modelo) {
+    this->placa = placa;
+    this->modelo = modelo;
+    this->nivel_combustivel = 0.0;
 }
 
-string Veiculo::get_placa(){
+string Veiculo::get_placa() { 
     return placa;
 }
 
-void Veiculo::set_placa(string placa){
-    this-> placa = placa;
+string Veiculo::get_modelo() { 
+    return modelo; 
 }
 
-string Veiculo:: get_modelo(){
-    return modelo;
+float Veiculo::get_nivel_combustivel() { 
+    return nivel_combustivel; 
 }
 
-void Veiculo::set_modelo(string modelo){
-    this-> modelo = modelo;
+void Veiculo::set_placa(string placa) { 
+    this->placa = placa;
 }
 
-float Veiculo::abastece(float litros){
-    float novo_combustivel = combustivel + litros;
-    set_combustivel(novo_combustivel);
-    return combustivel;
+void Veiculo::set_modelo(const string modelo) { 
+    this->modelo = modelo;
 }
 
-float Veiculo::consome_combustivel(float consumo){
-    if(combustivel < consumo)
-        return -1;
-    else 
-        combustivel - consumo;
+void Veiculo::set_nivel_combustivel(float nivel) { 
+    this->nivel_combustivel = nivel;
 }
 
-float Veiculo::calcula_autonomia(float gastoMedio){
-    if (combustivel = 0)
-        return -1;
-    else
-        combustivel / gastoMedio;
+float Veiculo::abastece(float litros) {
+    nivel_combustivel += litros;
+    return nivel_combustivel;
 }
 
-void Veiculo::imprime_info(){
-    cout << "Placa: " << get_placa() << endl;
-    cout << "Modelo: " << get_modelo() << endl;
-    cout << "Qnt Litros: " << get_combustivel() << endl;
+float Veiculo::consome_combustivel(float litros) {
+    if (litros > nivel_combustivel) return -1;
+    nivel_combustivel -= litros;
+    return nivel_combustivel;
+}
+
+float Veiculo::calcula_autonomia(float consumo_medio) {
+    return nivel_combustivel * consumo_medio;
+}
+
+void Veiculo::imprime_info() {
+    cout << "  Veiculo:\n";
+    cout << "    Placa:             " << placa << "\n";
+    cout << "    Modelo:            " << modelo << "\n";
+    cout << "    Nivel combustivel: " << nivel_combustivel << " L\n";
 }
