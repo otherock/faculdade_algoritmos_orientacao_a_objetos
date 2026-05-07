@@ -1,0 +1,53 @@
+
+PARTE I – LISTAS LINEARES
+
+Retornar a quantidade de elementos na lista
+    - Criar uma variável de controle para guardar a quantidade de elementos.
+    - Essa variável pode ser atualizada sempre que inserir ou remover algo da lista.
+    - A função pode retornar um número inteiro.
+    - Não precisa receber posição ou elemento como parâmetro.
+
+Verificar se a lista está vazia
+    - Verificar se a quantidade de elementos é igual a 0.
+    - Pode usar a variável de controle da lista.
+    - A função retorna verdadeiro ou falso.
+
+Verificar se a lista está cheia
+    - Comparar a quantidade de elementos com a capacidade máxima da lista.
+    - Se forem iguais, a lista está cheia.
+    - A função retorna verdadeiro ou falso.
+
+Inserir um elemento em uma posição específica
+    - A função deve receber o elemento e a posição.
+    - Verificar se a lista não está cheia.
+    - Verificar se a posição é válida.
+    - Mover os elementos para abrir espaço.
+    - Inserir o novo elemento na posição desejada.
+    - Atualizar a quantidade de elementos da lista.
+
+Remover um elemento de uma posição específica e retornar este elemento
+    - A função deve receber a posição do elemento.
+    - Verificar se a lista não está vazia.
+    - Verificar se a posição existe.
+    - Guardar o elemento removido em uma variável.
+    - Mover os elementos para fechar o espaço vazio.
+    - Atualizar a quantidade de elementos.
+    - Retornar o elemento removido.
+
+Retornar um elemento de uma posição específica
+    - A função deve receber a posição.
+    - Verificar se a posição é válida.
+    - Retornar o elemento armazenado naquela posição.
+
+Retornar a posição de um elemento específico
+    - A função deve receber o elemento que será procurado.
+    - Percorrer toda a lista procurando o elemento.
+    - Quando encontrar, retornar a posição.
+    - Caso não encontre, retornar um valor indicando que o elemento não existe, como -1.
+
+Variáveis de controle importantes
+    - Quantidade de elementos da lista.
+    - Capacidade máxima da lista.
+    - Índices para percorrer os elementos.
+    - Vetor/array usado para armazenar os dados.
+

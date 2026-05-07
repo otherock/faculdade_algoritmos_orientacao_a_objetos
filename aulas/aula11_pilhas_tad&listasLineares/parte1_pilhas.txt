@@ -1,0 +1,13 @@
+PARTE I - PILHAS
+
+Verificar se a lista está vazia:
+    - Verificar se o topo da pilha está em -1. Caso esteja, está vazio.
+
+Verificar se a pilha está cheia:
+    - Verificar se o topo da pilha está equivalente ao tamanho da pilha menos 1. Caso esteja, a pilha está cheia.
+
+Inserir um elemento no topo da pilha:
+    - Utilizamos o push (n)
+
+Remover um elemento do topo da pilha:
+    - Utilizamos a função pop pra fazer a remoção de um elemento no topo da pilha;

@@ -34,10 +34,8 @@ template <typename T>
 T* MyArray<T>::bubbleSort() {
     // Laço externo: percorre todo o array
     for (int i = 0; i < size - 1; i++) {
-        
         // Laço interno: empurra o maior elemento para o final
         for (int j = 0; j < size - i - 1; j++) {
-            
             // Se o elemento atual for maior que o próximo, eles trocam de lugar
             if (p[j] > p[j + 1]) {
                 T temp = p[j];       // Guarda o valor atual numa variável temporária
