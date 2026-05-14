@@ -16,21 +16,6 @@ class Queue {
         virtual bool isEmpty() = 0;
 
         /**
-         * Informa se a fila contém um determinado elemento.
-         */
-        virtual bool contains(T element) = 0;
-
-        /**
-         * Inverte a ordem dos elementos da fila.
-         */
-        virtual void flip() = 0;
-
-        /**
-         * Insere um elemento na primeira posição da fila.
-         */
-        virtual int enqueueWithPriority(T element) = 0;
-
-        /**
          * Informa se a fila está cheia.
          */
         virtual bool isFull() = 0;
