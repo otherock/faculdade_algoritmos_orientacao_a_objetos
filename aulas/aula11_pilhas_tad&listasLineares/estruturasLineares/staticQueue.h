@@ -32,6 +32,9 @@ class StaticQueue: public Queue<T> {
         StaticQueue(int max_size);
 
         bool isEmpty();
+        bool contains(T element);
+        void flip();
+        int enqueueWithPriority(T element);
         bool isFull();
         int numElements();
         int enqueue(T element);
@@ -54,8 +57,51 @@ bool StaticQueue<T>::isEmpty() {
 }
 
 template <typename T>
+bool StaticQueue<T>::contains(T element) {
+    if(isEmpty())
+        return false;
+
+    for(int i = 0; i < numElements(); i++)
+        if(elements[(first + i) % size] == element)
+            return true;
+
+    return false;
+}
+
+template <typename T>
+void StaticQueue<T>::flip() {
+    int n = numElements();
+
+    for(int i = 0; i < n / 2; i++) {
+        int left = (first + i) % size;
+        int right = (first + n - 1 - i) % size;
+        T temp = elements[left];
+        elements[left] = elements[right];
+        elements[right] = temp;
+    }
+}
+
+template <typename T>
+int StaticQueue<T>::enqueueWithPriority(T element) {
+    if(isFull())
+        return 2;
+
+    if(isEmpty()) {
+        first = 0;
+        last = 0;
+    }
+    else {
+        first = (first - 1 + size) % size;
+    }
+
+    elements[first] = element;
+
+    return 0;
+}
+
+template <typename T>
 bool StaticQueue<T>::isFull() {
-    return last == ((last + 1) % size);
+    return !isEmpty() && ((last + 1) % size == first);
 }
 
 template <typename T>

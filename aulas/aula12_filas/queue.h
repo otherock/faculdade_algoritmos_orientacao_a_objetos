@@ -1,6 +1,9 @@
 /**
- * Classe/interface que define o comportamento de uma fila.
- */
+1. Implemente   a   função  contains,   definida   abaixo,   que   informa   se   a   fila   contém determinado elemento: bool contains(T element)
+2. Implemente uma função que inverte a ordem dos elementos da fila: void flip()
+3. Implemente a função abaixo, que insere um elemento na primeira posição da fila.
+int enqueue: WithPriority(T element)
+*/
 
 #ifndef QUEUE_H
 #define QUEUE_H
